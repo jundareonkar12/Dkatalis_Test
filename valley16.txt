@@ -1,0 +1,30 @@
+public class Main
+{
+    public String valley(String str)
+    {
+        char []ch=str.toCharArray();
+       char temp=ch[0];
+       int down=1;
+       char temp2=0;
+       int length=str.length();
+        for(int i=1;i<str.length();i++)
+        {
+            if(ch[i]=='D')
+            {
+                down++;
+            }
+        }
+        int up=str.length()-down;
+        int ans=up-down;
+        if(ans==0)
+        return "sea level";
+        if(ans>0)
+        return "mountains";
+        return "valley";
+    }
+	public static void main(String[] args) {
+	    Main m=new Main();
+	    System.out.println(m.valley("DDDUUUUUUUDD"));
+		
+	}
+}
