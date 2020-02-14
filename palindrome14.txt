@@ -1,0 +1,17 @@
+public class Main
+{
+    public boolean palindrome(String str)
+    {
+       StringBuffer sf=new StringBuffer(str);
+       sf.reverse();
+       if(str.equals(sf.toString()))
+       return true;
+       return false;
+       
+    }
+	public static void main(String[] args) {
+	    Main m=new Main();
+	   System.out.println(m.palindrome("onoono"));
+		
+	}
+}
